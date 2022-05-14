@@ -1,19 +1,17 @@
-.App {
-  text-align: center;
-}
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Source+Code+Pro:wght@600&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+// Font Variables
+$montserrat: 'Montserrat', sans-serif;
+$source-code-pro: 'Source Code Pro', monospace;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+// Colour variables
+$light-orange: #db991e;
+$light-orange-svg: invert(86%) sepia(23%) saturate(7268%) hue-rotate(349deg) brightness(91%)
+  contrast(87%);
+$white-svg: invert(100%) sepia(58%) saturate(2%) hue-rotate(31deg) brightness(111%) contrast(101%);
 
-.App-header {
+.app {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,54 +22,53 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/**
- * Full name scroller
-*/
-
-// .full-name-container {
-//   overflow: hidden;
-//   width: 100%;
-// }
-
 .full-name {
   font-size: 120px;
-  //   animation: slidein infinite 5s linear;
+  border: 8px dashed white;
+  padding: 20px 50px 20px 50px;
+
+  .xav {
+    color: $light-orange;
+  }
 }
 
-// @keyframes slidein {
-//   from {
-//     margin-left: -100%;
-//     width: 100%;
-//   }
+.links {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 100px;
 
-//   to {
-//     margin-left: 100%;
-//     width: 100%;
-//   }
-// }
+  a {
+    font-family: $montserrat;
+    font-size: 24px;
+    color: white;
+    text-decoration-style: dotted;
+
+    &:hover {
+      color: $light-orange;
+      text-decoration-style: solid;
+    }
+  }
+}
 
 p {
   width: 75%;
+  font-family: $montserrat;
 }
 
-a {
-  color: white;
-  text-decoration-style: dotted;
+h1 {
+  font-family: $source-code-pro;
+}
 
-  &:hover {
-    text-decoration-style: solid;
+.icons {
+  img {
+    width: 20px;
+    margin: 10px;
+    filter: $white-svg;
+
+    &:hover {
+      filter: $light-orange-svg;
+    }
   }
 }
