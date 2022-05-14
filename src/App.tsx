@@ -9,12 +9,13 @@ function App() {
       <h1 className="full-name">
         <span className="xav">XAV</span>IER LACEY
       </h1>
-      <p>
-        Hi I'm Xav, a software engineer living in London with five years' experience building great
-        products specialising in Node.js, TypeScript and React.
-      </p>
-      <div className="links">
-        <div className="icons">
+      <div className="content">
+        <p>
+          Hi I'm Xav, a software engineer living in London with five years' experience building
+          great products specialising in Node.js, TypeScript and React.
+        </p>
+        <div className="links">
+          {/* <div className="icons"> */}
           <a href="mailto:x@vierlacey.com" target="_blank" rel="noreferrer">
             <img src={EmailSvg} alt="email" />
           </a>
@@ -24,6 +25,7 @@ function App() {
           <a href="https://www.linkedin.com/in/xlacey/" target="_blank" rel="noreferrer">
             <img src={LinkedInSvg} alt="linkedin" />
           </a>
+          {/* </div> */}
         </div>
       </div>
     </div>

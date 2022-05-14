@@ -17,28 +17,41 @@ $white-svg: invert(100%) sepia(58%) saturate(2%) hue-rotate(31deg) brightness(11
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .full-name {
-  font-size: 120px;
   border: 8px dashed white;
+  font-size: 9vw;
   padding: 20px 50px 20px 50px;
 
   .xav {
     color: $light-orange;
   }
+
+  @media (min-width: 2000px) {
+    font-size: 180px;
+  }
+}
+
+.content {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-height: 480px) {
+    flex-direction: row;
+    // justify-content: center;
+    margin: 0 30px 0 30px;
+  }
 }
 
 .links {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 100px;
-
   a {
     font-family: $montserrat;
     font-size: 24px;
@@ -50,6 +63,17 @@ $white-svg: invert(100%) sepia(58%) saturate(2%) hue-rotate(31deg) brightness(11
       text-decoration-style: solid;
     }
   }
+
+  img {
+    width: 20px;
+    margin: 10px;
+    filter: $white-svg;
+    // icons come from https://icon-sets.iconify.design/feather/
+
+    &:hover {
+      filter: $light-orange-svg;
+    }
+  }
 }
 
 p {
@@ -59,16 +83,4 @@ p {
 
 h1 {
   font-family: $source-code-pro;
-}
-
-.icons {
-  img {
-    width: 20px;
-    margin: 10px;
-    filter: $white-svg;
-
-    &:hover {
-      filter: $light-orange-svg;
-    }
-  }
 }
