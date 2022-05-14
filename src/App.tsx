@@ -1,16 +1,23 @@
-import React from 'react'
-import logo from './logo.svg'
 import './App.scss'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Xavier Lacey</h1>
+        <div className="full-name-container">
+          <h1 className="full-name">XAVIER LACEY</h1>
+        </div>
         <h2>Software engineer</h2>
-        <p>I'm a software engineer with five years' experience working in ecommerce.</p>
-        <p>I'm comfortable working in TypeScript, JavaScript, Node.js, Ruby and Ruby on Rails..</p>
+        <p>
+          Hi I'm Xav, a software engineer living in London with five years' experience building
+          great products specialising in Node.js, TypeScript and React.
+        </p>
+        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/xlacey/">
+          linkedin
+        </a>
+        <a target="_blank" rel="noreferrer" href="https://github.com/kimjongxav/">
+          github
+        </a>
       </header>
     </div>
   )
